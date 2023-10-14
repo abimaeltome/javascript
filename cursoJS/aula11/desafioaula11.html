@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        div {
+            font: normal 18px Arial;
+            background-color: black;
+            color: azure;
+            margin-top: 20px;
+        }
+    </style>
+ 
+</head>
+<body>
+
+    <h1>Sabendo se é Brasileiro ou Estrangeiro</h1>
+    Digite o seu país: <input type="text" name="lugar" id="lugar">
+    <input type="button" value="Verificar" onclick="buscar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function buscar() {
+
+            let país = window.document.getElementById('lugar').value
+            var res = window.document.getElementById('res')
+
+            if (país !== 'Brasil') {
+                res.innerHTML = ` Nascendo em ${país}`
+                res.innerHTML += '<p> Você é estrangeiro!</p>'
+                
+            } else {
+                res.innerHTML = `<p> Nascendo em <strong>${país}</strong></p>`
+                res.innerHTML += '<p> Você é <strong>brasileiro</strong>!</p>'
+                
+            }
+        }
+    </script>
+    
+</body>
+</html>
