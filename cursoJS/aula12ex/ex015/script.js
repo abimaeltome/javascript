@@ -9,7 +9,7 @@ function verificar() {
         var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
         var gênero = ''
-        var img = document.createComment('img')
+        var img = document.createElement('img')
         img.setAttribute('id', 'foto')// MESMA COISA QUE CRIAR O id = 'foto' DENTRO DA TAG img NO HTML
         if (fsex[0].checked) {
             gênero = 'Homem'
@@ -48,6 +48,7 @@ function verificar() {
                 // Idoso
                 img.setAttribute('src', 'idosomulher.png')
             }
+
 
         } 
         res.style.textAlign = 'center'
