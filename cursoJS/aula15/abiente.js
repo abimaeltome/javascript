@@ -12,10 +12,10 @@ console.log(`Acrescentando o valor 2 ao final do vetor fica assim:`, num)
 let pos = num.indexOf(8)
 console.log(`O valor 8 está na posição ${pos}`)
 */
-let pos = num.indexOf(4)
+let pos = num.indexOf(9)//PESQUISA O VALOR 4 DENTRO DO VETOR num E COLOCA A LOCALIZAÇÃO DELE DENTRO DA VARIÁVEL pos, CASO O VALOR PESQUISADO NÃO FOR ENCONTRADO A VARIÁVEL pos VAI RECEBER O VALOR -1
 if (pos==-1) {
     console.log('O valor não foi encontrado!')
     
 } else {
-    console.log(`O valor está na posição ${pos}`)
+    console.log(`O valor ${num[4]} está na posição ${pos}`)
 }
