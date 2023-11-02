@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <p id="texto1">CFB CURSOS</p>
+    <br/>
+    <p id="texto2">CURSO DE JQUERY</p>
+    <br/>
+    <p id="resultado"></p>
+    <script>
+        $(document).click((event)=>{
+            $('#resultado').text('Objeto clicado:' + event.target.id)
+            if (event.target.id == 'resultado') {
+                window.alert('Resultado clicado!')
+            }
+        })
+       
+    </script>
+</body>
+</html>

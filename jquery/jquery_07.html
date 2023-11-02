@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <p id="texto"></p>
+    <script>
+        let pmx=0
+        let pmy=0
+
+        // pegando a posição do mouse com jquery
+        $(document).mousemove((event)=>{
+            pmx = event.pageX // guardando a posição x do mouse na variável pmx
+            pmy = event.pageY // guardando a posição y do mouse ma variável pmy
+            $('#texto').text("Mouse X: " + pmx + "px"  + ", Mouse Y: " + pmy + 'px')
+        })
+     
+    </script>
+</body>
+</html>
