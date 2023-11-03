@@ -14,7 +14,7 @@
     <p id="resultado"></p>
     <script>
         $(document).on({
-            click: ()=>{$('#resultado').text(event.type + ": " + event.which)},
+            click: ()=>{$('#resultado').text(event.type + ": " + event.which)},// event.type serve para mostrar o tipo de evento que está acontecendo e event.which mostra o evento 
             keydown: ()=>{
                 $('#resultado').text(event.type + ": " + event.which)
                 if (event.which == 13) {

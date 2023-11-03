@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                <h3>Abimael Pereira Tomé</h3>
+                <span>Curso de jquery</span>
+                <p>Seletores parent</p>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $("p").parent().css({'border':'2px solid #0f0'}) // O parent() APLICA O CCS NO PAI DE p
+        $("li").parent().css({'border':'3px solid #00f'}) // O parent() APLICA O CCS NO PAI DE li
+        $("ul").parent().css({'border':'4px solid #0ff'}) // O parent() APLICA O CCS NO PAI DE ul
+        $("div").parent().css({'border':'5px solid #f00'}) // O parent() APLICA O CCS NO PAI DE div
+        $("body").parent().css({'border':'6px solid #f0f'}) // O parent() APLICA O CCS NO PAI DE body
+        //$("p").parents() //  APLICA EM TODOS OS PAIS SUPERIORES DE p
+        //$("p").parentsUntil("div") //APLICA EM TODOS OS PAIS DE p ATÉ O div
+    </script>
+</body>
+</html>
