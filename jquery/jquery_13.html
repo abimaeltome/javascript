@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <h3>
+                Abimael Pereira Tomé
+            </h3>
+            <p>
+                Curso de jquery
+            </p>
+            <h2>
+                Seletores Siblings
+            </h2>
+            <p>
+                Siblings(IRMÃOS)
+            </p>
+        </span>
+    </div>
+    <script>
+        /* PARA PEGAR TODOS OS ELEMENTOS IRMÃOS DE h3 E APLICAR O CSS  APONTAMOS PARA O h3 USANDO JQUERY E O COMANDO siblings() */
+       $('h3').siblings().css({'border':'4px solid red'})
+
+     //$('h3').siblings('p').css({'border':'2px solid blue'}) // PARA APLICAR O CSS APENAS AOS IRMÃOS DE h3 QUE SÃO p
+     
+     //$('h3').next().css({'border':'4px solid green'})// next()APLICA O CSS APENAS NO PRÓXIMO IRMÃO DE h3 NO CASO O PRIMEIRO p
+
+     //$('h2').prev().css({'border':'4px solid black'})// prev() APLICA O CSS APENAS NO IRMÃO ANTERIOR DE h2 NO CASO O PRIMEIRO p
+
+     /* UTILIZAMOS TAMBÉM PARA SELECIONAR TODOS OS ELEMENTOS ANTERIORES O prevAll() E PARA SELECIONAR TODOS OS ELEMENTOS POSTERIORES O nextAll()  */
+
+     /*prevUntil('h3') PARA SELECIONAR TODOS OS ELEMENTOS  ANTERIORES ATÉ O 'h3' E O nextUntil('') PARA SELECIONAR TODOS OS ELEMENTOS POSTERIORES ATÉ O ''*/
+       
+    </script>
+</body>
+</html>

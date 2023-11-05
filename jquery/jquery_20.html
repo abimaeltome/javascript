@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <link rel="stylesheet" href="button.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .caixa {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+            position: absolute;
+            left: 0px;
+            top: 50px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="caixa" class="caixa">
+        <h3>Abimael Pereira Tomé</h3>
+        <p>Curso de jQuery</p>
+    </div>
+
+    <button id="btn_aumentar" class="botão_vermelho">Aumentar<button>
+    <button id="btn_diminuir" class="botão_vermelho">Diminuir<button>
+    <button id="btn_esquerda" class="botão_vermelho">Esquerda<button>
+    <button id="btn_direita" class="botão_vermelho">Direita<button>
+
+    <script>
+        $('#btn_aumentar').click(
+            function(){
+                $('#caixa').animate({width: "500px", height:"500px"})// animate({}) ALTERA AS PROPRIEDADES CSS etc...
+            }
+        )
+        $('#btn_diminuir').click(
+            function(){
+                $('#caixa').animate({width: "180px"},{duration:2000}).animate({ height:"180px"},{duration:2000})// PODEMOS USAR O animate({}) ANINHADO E PODEMOS ADICIONAR A DURAÇÃO DA ANIMAÇÃO COM O {duration: }
+            }
+        )
+        $('#btn_direita').click(
+            function(){
+                $('#caixa').animate({left: "500px"},{duration:1000, complete:()=>{
+                    alert('movimentação terminou')
+                }}) // PODEMOS ADICIONAR UMA FUNÇÃO NO FINAL DA DURAÇÃO USANDO O complete: 
+            }
+        )
+        $('#btn_esquerda').click(
+            function(){
+                $('#caixa').animate({left: "0px"},{duration:1000}
+        )
+            }
+        )
+    </script>
+</body>
+</html>

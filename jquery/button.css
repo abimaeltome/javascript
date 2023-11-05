@@ -1,0 +1,29 @@
+.botão_vermelho{
+    width: auto;
+    height: auto;
+    background-color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 4px black;
+    
+}
+
+.botão_azul{
+    margin-right: 50px;
+    margin-left: 50px;
+    width: auto;
+    height: auto;
+    background-color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 4px black;
+    
+}
+button:hover {
+    transform: scale(1.05)
+
+}

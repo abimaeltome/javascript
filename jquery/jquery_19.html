@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <link rel="stylesheet" href="button.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .caixa {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="caixa" class="caixa" style="margin-bottom: 10px;">
+        <h3>Abimael Pereira Tomé</h3>
+        <p>Curso de jQuery</p>
+    </div>
+    <button id="btn_mostrar_ocultar" class="botão_vermelho">Ocultar<button> 
+    <script>
+
+        $('#btn_mostrar_ocultar').click(
+            function () {
+                $('#caixa').toggle()// toggle() MOSTRA OU OCULTA O ELEMENTO
+                if ($('#caixa').is(':visible')) {
+
+                    $('#btn_mostrar_ocultar').text('Ocultar')
+                    
+                } else {
+
+                    $('#btn_mostrar_ocultar').text('Mostrar')
+                    
+                }
+                
+            }
+        )
+
+    </script>
+</body>
+</html>

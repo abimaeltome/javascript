@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <link rel="stylesheet" href="button.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .vermelho {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            text-align: center;
+        }
+        .azul {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="caixa" class="vermelho" style="margin-bottom: 10px;">
+        <h3>Abimael Pereira Tomé</h3>
+        <p>Curso de jQuery</p>
+    </div>
+    <button id="btn_vermelho" class="botão_vermelho">Vermelho</button> 
+    <button id="btn_azul" class="botão_azul">Azul</button>
+    <script>
+
+
+/*
+        // attr('id')  PEGA O ATRIBUTO QUE FOI CLICADO, NESTE CASO FOI O id"caixa"
+        $('#caixa').click(
+            function () {
+                alert(" Atributo: " + $(this).attr('id'))
+            }
+        )
+*/          
+
+/*
+    // PARA ALTERAR O VALOR DE UM ATRIBUTO USAMOS A FUNÇÃO ABAIXO...
+        $('#caixa').click(
+            function () {
+                $(this).attr('class','azul')// AO CLICAR SOBRE A div A FUNÇÃO VAI PEGAR O ATRIBUTO class E MUDAR PARA O azul
+            }
+        )
+*/
+
+    // ALTERANDO OS ATRIBUTOS POR BOTÕES
+        $('#btn_vermelho').click(
+            function () {
+                $('#caixa').attr('class','vermelho')
+                
+            }
+        )
+        $('#btn_azul').click(
+            function () {
+                $('#caixa').attr('class','azul')
+                
+            }
+        )
+
+    </script>
+</body>
+</html>

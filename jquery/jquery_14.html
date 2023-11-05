@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <p>CFB Cursos</p>
+    <h3>CFB Cursos</h3>
+
+    <p>Curso de canvas</p>
+    <h3>Curso de Canvas</h3>
+
+    <p>youtube.com/cfbcursos</p>
+    <h3>youtube.com/cfbcursos</h3>
+
+    <p>www.cfbcursos.com.br</p>
+    <h3>www.cfbcursos.com.br</h3>
+
+    <p>Filtrando elementos</p>
+    <h3>Filtrando elementos</h3>
+    
+    <script>
+        $('p').first().css({'border':'1px solid red','background-color':'yellow'})// first() SELECIONA O PRIMEIRO p E APLICA O ESTILO.
+        $('p').last().css({'border':'1px solid red','background-color':'green'})// last() SELECIONA O ÚLTIMO p E APLICA O ESTILO.
+
+        $('p').eq(2).css({'border':'1px solid red','background-color':'blue'}) // eq(2) SELECIONA O TERCEIRO p e APLICA O ESTILO
+
+
+        /*
+        eq(0) PARA SELECIONAR O PRIMEIRO ELEMENTO
+        eq(1) PARA SELECIONAR O SEGUNDO ELEMENTO  
+        eq(2) PARA SELECIONAR O TERCEIRO ELEMENTO   
+        eq(3) PARA SELECIONAR O QUARTO ELEMENTO   
+        eq(n) PARA SELECIONAR O n ELEMENTO           
+        */
+
+
+
+    </script>
+</body>
+</html>
