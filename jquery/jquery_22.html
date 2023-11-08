@@ -11,7 +11,7 @@
             border: 1px solid black;
             width: 200px;
             height: 200px;
-            background-color: blue;
+            background-color: rgb(4, 4, 119);
             color: white;
             position: absolute;
             left: 20px;
@@ -29,21 +29,29 @@
         <p>Curso de jQuery</p>
     </div>
 
-    <button id="btn_tamanho" class="botão_vermelho">Diminuir / Aumentar<button>
+    <button id="btn_aumentar" class="botão_vermelho">Aumentar<button>
+    <button id="btn_diminuir" class="botão_vermelho">Diminuir<button>
     <button id="btn_mostrar" class="botão_vermelho">Ocultar / Mostrar<button>
 
     <script>
-        // PARA DIMINUIR A DIV #caixa COMBINAMOS animate({width:'toggle', height:'toggle'}
-        $('#btn_tamanho').click(
+         //  TAMANHO DA DIV COM O  delay(2000) DE 2 SEGUNDOS ANTES DA AÇÃO
+        $('#btn_aumentar').click(
             function(){
-                $('#caixa').animate({width:'toggle', height:'toggle'},{duration:2000})
+                $('#caixa').delay(2000).animate({width:'500px'}).delay(2000).animate({height:'500px'}).delay(2000).animate({width:'200px'}).delay(2000).animate({height:'200px'})
                
             }
         )
-        // PARA OCULTAR A DIV #caixa COMBINAMOS animate({opacity:'toggle'}
+        //  TAMANHO DA DIV SEM O delay
+        $('#btn_diminuir').click(
+            function(){
+                $('#caixa').animate({width:'500px'}).animate({height:'500px'}).animate({width:'200px'}).animate({height:'200px'})
+               
+            }
+        )
+       
         $('#btn_mostrar').click(
             function(){
-                $('#caixa').animate({opacity:'toggle'},{duration:2000})
+                $('#caixa').animate({width:'toggle'},{height:'toggle'})
             }
         )
 
