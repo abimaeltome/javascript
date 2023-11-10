@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <link rel="stylesheet" href="button.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .caixa {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(4, 4, 119);
+            color: white;
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="caixa" class="caixa">
+        <h3>Abimael Pereira Tomé</h3>
+        <p>Curso de jQuery</p>
+    </div>
+
+    <button id="btn_mostrar" class="botão_vermelho">Mostrar<button>
+    <button id="btn_ocultar" class="botão_vermelho">Ocultar<button>
+    <button id="btn_mostrar_ocultar" class="botão_vermelho">Ocultar / Mostrar<button>
+
+    <script>
+         //  fadeIn  MOSTRA A DIV 
+        $('#btn_mostrar').click(
+            function(){
+                $('#caixa').fadeIn()
+            }
+        )
+        //  fadeOut  OCULTA A DIV
+        $('#btn_ocultar').click(
+            function(){
+                $('#caixa').fadeOut()
+               
+            }
+        )
+       //  É POSSÍVEL ANINHAR O fadeIn E O fadeOut E COLOCAR UM TEMPORIZADOR DENTRO DAS () 
+        $('#btn_mostrar_ocultar').click(
+            function(){
+                $('#caixa').fadeIn(4000).fadeOut(1000)
+            }
+        )
+
+    </script>
+</body>
+</html>

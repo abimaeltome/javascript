@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <link rel="stylesheet" href="button.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding:0px;
+            margin: 0px;
+            border: none;
+        }
+        .menu {
+            background-color: rgb(206, 206, 194);
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .itemMenu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #128;
+            color: aliceblue;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="menu" class="menu">
+        <div class="itemMenu">Home</div>
+        <div class="itemMenu">Jquery</div>
+        <div class="itemMenu">Canvas</div>
+        <div class="itemMenu">Python</div>
+        <div class="itemMenu">Arduíno</div>
+    </div>
+
+   
+
+    <script>
+         //  fadeTo(200,0.3)  CRIA UM EFEITO DE OPACIDADE NA DIV COM UM TEMPO DE 200mls E MUDA A OPACIDADE ATUAL PARA 0.2
+        $('.itemMenu').mouseover(
+            function(){
+                $(this).fadeTo(200,0.2)
+            }
+        )
+        //  fadeTo(200,1)  CRIA UM EFEITO DE OPACIDADE NA DIV COM UM TEMPO DE 200mls E MUDA A OPACIDADE ATUAL DE 0.2 PARA O PADRÃO 1
+        $('.itemMenu').mouseleave(
+            function(){
+                $(this).fadeTo(200,1)
+            }
+        )
+     
+
+    </script>
+</body>
+</html>
