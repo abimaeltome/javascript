@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <link rel="stylesheet" href="button.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .caixa {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        <button id="btnAumentar">Aumentar</button>
+        <button id="btnDiminuir">Diminuir</button>
+    </p>
+    <p>
+        <button id="btnFinalizar">Finalizar</button>
+    </p>
+    <p id="info"></p>
+
+    <div id="caixa" class="caixa"></div>
+
+    <script>
+
+        // animate({width:800},10000)  ANIMA A LARGURA DA DIV ATÉ 800px EM 5 SEGUNDOS
+        $('#btnAumentar').click(function(){
+            $('#caixa').animate({width:800},5000)
+            // queue().length PEGA A QUANTIDADE DE ANIMAÇÕES QUE ESTÃO NA FILA
+            $('#info').text($('#caixa').queue().length)
+        })
+        $('#btnDiminuir').click(function(){
+            $('#caixa').animate({width:100},5000)
+            $('#info').text($('#caixa').queue().length)
+        })
+         // finish()  INTERROMPE A ANIMAÇÃO DA DIV
+        $('#btnFinalizar').click(function(){
+            $('#caixa').finish()
+        })
+        
+
+
+
+    </script>
+</body>
+</html>
