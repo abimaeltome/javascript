@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de jquery</title>
+    <link rel="stylesheet" href="button.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .caixa {
+            background-color: rgb(199, 199, 188);
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 10px 0pc 0px 0px;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+        }
+        .subcaixa {
+            width: 100px;
+            height: 100px;
+            margin: 0px 0px 10px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <p>
+        <button id="btnAdicionarAntes">Adicionar  Antes</button>
+        <button id="btnAdicionarDepois">Adicionar Depois</button>
+        <button id="btnAdicionarTextoAntes">Adicionar Texto Antes</button>
+        <button id="btnAdicionarTextoDepois">Adicionar Texto Depois</button>
+        
+    </p>
+    <div id="caixa" class="caixa">
+        <div class="subcaixa" style="background-color: rgb(255, 255, 255);">0</div>
+    </div>
+    <div id="caixa2" class="caixa">Abimael Tomé</div>
+
+
+    <script>
+        let r,g,b
+        let num = 1
+            
+        $('#btnAdicionarAntes').click(()=>{
+
+            r=Math.floor(Math.random()*255)
+            g=Math.floor(Math.random()*255)
+            b=Math.floor(Math.random()*255)
+           // before() ADICIONA ANTES DO ELEMENTO SELECIONADO
+            $('#caixa').before("<div class='subcaixa' style='background-color:rgb("+r+","+g+","+b+")'>"+num+"</div>")
+            
+            num++
+        })
+         $('#btnAdicionarDepois').click(()=>{
+            
+           
+            r=Math.floor(Math.random()*255)
+            g=Math.floor(Math.random()*255)
+            b=Math.floor(Math.random()*255)
+           // after() ADICIONA DEPOIS DO ELEMENTO SELECIONADO
+            $('#caixa').after("<div class='subcaixa' style='background-color:rgb("+r+","+g+","+b+")'>"+num+"</div>")
+            
+            num++
+        })
+        $('#btnAdicionarTextoAntes').click(()=>{
+            // prepende() ADICIONA NO INÍCIO
+
+            $('#caixa2').prepend("Curso de jQuery ADICIONADO NO INÍCIO")
+            
+        
+        })
+         $('#btnAdicionarTextoDepois').click(()=>{
+            // append() ADICIONA NO FINAL
+    
+            $('#caixa2').append("Curso de jQuery ADICIONADO NO FINAL")
+            
+            
+        })
+    </script>
+</body>
+</html> 
