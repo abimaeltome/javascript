@@ -7,40 +7,46 @@
     <link rel="stylesheet" href="button.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <style>
-        .cor {
+        .caixa {
             background-color: yellow;
-            border: 2px solid red;
-            padding: 5px;
+            border: 3px solid red;
+            padding: 10px;
             border-radius: 5px;
+            margin-top: 10px;
         }
         
     </style>
 </head>
 <body>
     <div class="menu">
-        <button id="btn_each">Função each()</button>
-        <button id="btn_cor">Classe cor</button>
+        <button id="btn_get">Obter elementos</button>
+    </div>
+    <div id="elementos" class="caixa">
+
     </div>
 
-    <p>Abimael Pereira Tomé</p>
-    <p>Curso de jQuery</p>
-    <p>Função each()</p>
-    <p>cfbcursos.com.br</p>
-    <p>youtube.com/cfbcursos</p>
+    <p  id="p1">Abimael Pereira Tomé</p>
+    <p  id="p2">Curso de jQuery</p>
+    <p  id="p3">Função get()</p>
+    <p  id="p4">cfbcursos.com.br</p>
+    <p  id="p5">youtube.com/cfbcursos</p>
 
     <script>
-        // each() PEGA CADA ELEMENTO 'p' E APLICA A FUNÇÃO
-        $("#btn_each").click(()=>{
-            $('p').each(function(){
-                alert($(this).text())
-            })
+        $('#btn_get').click(()=>{
+            $("#elementos").append($("p").get())// PEGA TODOS OS ELEMENTOS "p" COM O get() E ADICIONA DENTRO DA DIV "elementos" COM O append()
+
         })
-        
-        $("#btn_cor").click(()=>{
-            $('p').each(function(){ // each() PEGA CADA ELEMENTO 'p' E APLICA A FUNÇÃO 
-                $(this).addClass('cor')// addClass() ADICIONA A CLASSE 'cor' AO ELEMENTO SELECIONADO
-            })
-        })
+
+
+        // $('#btn_get').click(()=>{
+        //     let el = $("p").get()// VARIÁVEL el RECEBE TODOS OS ELEMENTOS DE "p" COMO ARRAY, ATRAVÉS DO get()
+        //     console.log(el[1].id) //  EXIBE O id DO SEGUNDO PARÁGRAFO // (p2)
+        // })
+
+    //     //get() ABAIXO PEGA TODOS OS ELEMENTOS DE p   
+    //    $('#btn_get').click(()=>{
+    //         console.log($("p").get())
+    //     })
     </script>
 
 </body>
